@@ -6,7 +6,7 @@
 
 ### 数据集
 
-![demo](E:\srtp_proj\doc\demo.png)
+![demo](doc/demo.png)
 
 ## 预处理
 
@@ -36,27 +36,25 @@
 
 ### FCN
 
-![model](E:\srtp_proj\doc\model.png)
+![model](doc\model.png)
 
 ### 训练
 
 使用Adam Optimizer迭代100个Epoch。
 
-![train](E:\srtp_proj\doc\train.png)
+![train](doc/train.png)
 
 ## 成果展示
 
 对于癌变切片有较好表现，能基本正确识别癌变的区域，但是对于没有癌变的切片，也会错误地识别一些区域。
 
-![2](E:\srtp_proj\result\2.png)
+![2](doc/2.png)
 
-![5](E:\srtp_proj\result\5.png)
+![5](doc/5.png)
 
-![23](E:\srtp_proj\result\23.png)
+![23](doc/23.png)
 
-![25](E:\srtp_proj\result\25.png)
-
-![94](E:\srtp_proj\result\94.png)
+![25](doc/25.png)
 
 ## 总结
 
