@@ -36,7 +36,7 @@
 
 ### FCN
 
-![model](doc\model.png)
+![model](doc/model.png)
 
 ### 训练
 
