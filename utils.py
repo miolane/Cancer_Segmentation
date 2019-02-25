@@ -15,12 +15,15 @@ def show2img(img1, img2):
 
 
 def save_result(data, label, pred, path):
-    grid = plt.GridSpec(2, 3, wspace=0.5, hspace=0.5)
+    grid = plt.GridSpec(2, 3, wspace=0.5)
     plt.subplot(grid[:2, :2])
+    plt.title("Original image")
     plt.imshow(data)
     plt.subplot(grid[0, 2])
+    plt.title("Label")
     plt.imshow(label)
     plt.subplot(grid[1, 2])
+    plt.title("Prediction")
     plt.imshow(pred)
     plt.savefig(path)
 
