@@ -1,7 +1,6 @@
 import tensorflow as tf
 import numpy as np
-import tensorflow.contrib.slim as slim
-from utils import tfr2dataset, _parse_function, load_batch
+from utils import tfr2dataset
 from model import Model
 
 
@@ -43,8 +42,8 @@ with tf.Session() as sess:
             data = np.reshape(data, [-1, 512, 512, 3])
             label = np.reshape(label, [-1, 128, 128])
             sess.run(model.train_op,
-                     feed_dict={model.x: data, model.y: label, model.is_istrain: True})
-            summary = sess.run(merge, feed_dict={model.x: data, model.y: label, model.is_istrain: True})
+                     feed_dict={model.x: data, model.y: label})
+            summary = sess.run(merge, feed_dict={model.x: data, model.y: label})
             writer.add_summary(summary, step)
             step += 1
             if step % 800 == 0:

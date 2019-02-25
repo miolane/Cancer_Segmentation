@@ -38,7 +38,6 @@ class Model(object):
     def __init__(self, is_train):
         self.x = tf.placeholder(tf.float32, [None, 512, 512, 3])
         self.y = tf.placeholder(tf.int32, [None, 128, 128])
-        self.is_istrain = tf.placeholder(tf.bool)
         self.fcn = fcn
         self.y_ = self.fcn(self.x, is_train)
         self.optimizer = tf.train.AdamOptimizer()

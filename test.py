@@ -1,7 +1,7 @@
 import tensorflow as tf
 import numpy as np
 import matplotlib.pyplot as plt
-from utils import tfr2dataset, _parse_function, load_batch, show2img, save_result
+from utils import tfr2dataset, save_result
 from model import Model
 
 plt.rcParams['savefig.dpi'] = 300
@@ -29,7 +29,7 @@ with tf.Session() as sess:
             data, label = sess.run(nextbatch)
             data = np.reshape(data, [-1, 512, 512, 3])
             label = np.reshape(label, [-1, 128, 128])
-            y_ = sess.run(model.y_, feed_dict={model.x: data, model.is_istrain: False})
+            y_ = sess.run(model.y_, feed_dict={model.x: data})
             pred = np.argmax(y_, axis=-1)
             savepath = RESULTPATH + '/' + str(i)
             i += 1
